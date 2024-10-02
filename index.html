@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+
+        .hero {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            position: fixed;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+        }
+
+        #popvalidate {
+            display: none;
+        }
+
+        #first {
+            width: 60vw;
+            height: 100vh;
+            background-color: #f5d487;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        #first h1 {
+
+            color: #85641c;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            padding: 35px;
+            font-size: x-large;
+
+
+        }
+
+        #second {
+            width: 100vw;
+            height: 100vh;
+
+
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        #box1 span {
+            display: block;
+            text-align: right;
+            padding: 15px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 500;
+            font-size: small;
+        }
+
+        #box2 {
+
+            margin-left: 15%;
+            margin-top: 5%;
+        }
+
+        input {
+            border-style: none;
+            background-color: #f3f3f3;
+            height: 28px;
+            border-radius: 8px;
+            width: 60vmin;
+            margin-top: 5px;
+            margin-bottom: 25px;
+
+        }
+
+        label {
+            font-weight: bolder;
+        }
+
+        @media only screen and (max-width: 450px) {
+            .hero {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            #first {
+                width: 100vw;
+            }
+
+
+
+            #second {
+                width: 100vw;
+            }
+
+            #box1 span {
+                text-align: center;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="hero">
+        <div id="first">
+            <h1>Discover the world's top designers & creatives.</h1>
+            <img src="icon.png" alt="Graphical logo" width="100%">
+
+        </div>
+
+
+
+        <div id="second">
+            <div id="box1">
+                <span>Already a member ? <a href="">Sign In</a></span>
+            </div>
+
+
+            <div id="box2">
+                <span style="font-weight: bolder;font-size:25px;font-family:system-ui,sans-serif;">Sign up to
+                    Dribbble</span>
+                <div id="popvalidate"><span
+                        style="color:rgb(194, 13, 13);display:inline-block;margin-top:15px;">*Username has already
+                        been taken</span><br>
+
+                </div>
+
+                <form action="user_info.html" method="post">
+                    <div style="display:flex;margin-top:25px">
+
+                        <div style="width:30vmin">
+
+                            <label for="name">Name</label>
+                        </div>
+                        <div style="width:30vmin">
+
+                            <label for="username">Username</label>
+                        </div>
+                    </div>
+
+                    <input type="text" style="width: 29vmin;margin-right:4px;margin-top:5px;" placeholder="Name"
+                        id="name" required>
+                    <input type="text" style="width: 29vmin;margin-bottom:35px" placeholder="Username" id="username"
+                        required>
+                    <br>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" placeholder="Email" required><br>
+
+                    <label for="password">Password</label><br>
+                    <input type="password" id="password" placeholder="Password" required>
+
+                    <br>
+
+                    <div style="display: flex;gap:5px">
+                        <div>
+
+                            <input type="checkbox" style="width:20px;" required>
+                        </div>
+                        <div>
+
+                            <span style="font-size:small;display:inline-block;width:60%">creating an account means you
+                                are ok with our terms <a href="">Terms of service, privacy policy,</a>and our default <a
+                                    href="">Notification Settings.</a>
+                            </span>
+                        </div>
+                    </div>
+
+                    <input type="submit" value="Create Account"
+                        style="background-color:#e94b8a;color:#f3f3f3;margin-top:15px;width:35vmin;padding:5px">
+
+
+                </form>
+
+                <div>
+
+                    <span style="font-size:small;display:inline-block;width:70vmin;color:#6b6b6c">
+                        this site is protected by reCAPTCHA and the google <a href="">privacy</a>
+                        and <a href="">Term of service</a> apply.
+                    </span>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+    <br>  <br>  <br> <br>  <br> 
+</body>
+
+</html>

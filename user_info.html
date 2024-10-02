@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            color: rgb(10, 11, 11);
+        }
+
+        .cedarville-cursive-regular {
+            font-family: "Cedarville Cursive", cursive;
+            font-weight: 400;
+            font-style: normal;
+          }
+          
+          
+        body {
+         
+            
+            overflow-x: hidden;
+            height:100vh;
+            width:100vw;
+            
+        }
+
+      
+        .logo {
+            width: 100vw;
+            height: 10vh;
+        }
+
+        .box1 {
+            width: 100%;
+            margin: auto;
+            height: 100%;
+          text-align: center;
+            border-radius: 2%;
+            padding: 35px;
+        
+        }
+
+        .image {
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 50%;
+            background-color: rgb(248, 245, 245);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 25px;
+            margin-right: 30px;
+            position: relative;  
+        }
+
+        img {
+           width: 100%;
+           height: 100%;
+            object-fit:cover;
+        }
+
+      
+
+        .file-upload {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .file-upload:hover {
+            background-color: #45a049;
+        }
+
+        .horizon_lay {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            position: relative;
+       
+        }
+
+        .horizon_lay input[type=file] {
+            display: none;
+        }
+
+        .horizon_lay label {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .horizon_lay label:hover {
+            background-color: #45a049;
+        }
+
+        canvas {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        ::input {
+           background-color: #53289d;
+          
+          }
+
+        @media only screen and (max-width: 450px) {
+              .box1{
+                width:100%;
+                
+              }
+
+              .horizon_lay {
+                flex-direction: column;
+                gap:55px;
+              
+           
+            }
+
+            #filechooser{
+            margin-right:30px;
+            }
+        }
+            
+    </style>
+
+</head>
+
+<body>
+  
+    <div class="box1">
+        <h1 style="font-weight:1000;font-size:45px;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif" >Welcome! Let's create your profile</h1>
+        <p style="color:rgb(37, 38, 39);font-family:sans-serif;margin-top:15px">Let others get to know you better! You can do this later.</p>
+        <span style="display:inline-block;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-weight:1000;margin-top:35px;font-size:x-large">Add an avatar</span>
+        <div class="horizon_lay">
+            <div class="image">
+                <img src="OIP (1).jpg" alt="" width="100%" id = "default_img">
+            </div>
+            <label for="avatar-upload" class="file-upload" id = "filechooser">Choose Image</label>
+            <input type="file" id="avatar-upload" accept="image/jpeg, image/png" >
+        </div>
+        <span style="display:inline-block;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;font-weight:1000;margin-top:35px;font-size:x-large">Add your location</span>
+       <br> <input type="text" style = " background:none;border-style: none none solid none  ;border-radius:0px;margin-top:25px;border-color:aliceblue;width:220px;height:40px " >
+       <br> <a href="choices.html"><input type="button" style = " background-color:#e94b8a;width:150px;height:35px;border-style:none;border-radius:10px;margin-top:15px;margin-bottom:15px;color:aliceblue" value = "next"  ></a>
+
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+</body>
+</html>
